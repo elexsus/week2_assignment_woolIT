@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>woolIT Pet Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="woolIT Logo" height="100" width="400">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#shop-by-pet">Shop by Pet</a></li>
+                    <li><a href="#shop-by-brand">Shop by Brand</a></li>
+                    <li><a href="#shop-by-breed">Shop by Breed</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#login" class="login-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>woolIT Special Sale</h1>
+                <p>Use promo code <strong>MYPETS</strong></p>
+                <p>Enjoy 10% extra discount up to Rs. 500 on orders above Rs. 1,000</p>
+                <a href="#shop-now" class="btn">Shop Now</a>
+            </div>
+            <div class="hero-image slideshow-container">
+                <img class="slides" src="images/hero-banner1.jpeg" alt="Pet Food Image">
+                <img class="slides" src="images/hero-banner2.jpeg" alt="Pet Food Image">
+                <img class="slides" src="images/hero-banner3.jpeg" alt="Pet Food Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="shop-by-pet">
+        <div class="container">
+            <h2>Let's Shop by Pet</h2>
+            <div class="pet-categories">
+                <div class="pet-category">
+                    <img src="images/dog.jpeg" alt="Dogs">
+                    <p>Dogs</p>
+                </div>
+                <div class="pet-category">
+                    <img src="images/cat.jpeg" alt="Cats">
+                    <p>Cats</p>
+                </div>
+                <div class="pet-category">
+                    <img src="images/bird.jpeg" alt="Birds">
+                    <p>Birds</p>
+                </div>
+                <div class="pet-category">
+                    <img src="images/fish.jpeg" alt="Fishes">
+                    <p>Fishes</p>
+                </div>
+                <div class="pet-category">
+                    <img src="images/rat.jpeg" alt="Small Pets">
+                    <p>Small Pets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="featured-products">
+                <div class="product-card">
+                    <img src="images/product1_1.jpeg" alt="Product 1">
+                    <p>Keep Your Dog Hygiene</p>
+                    <a href="#shop-now" class="btn">Shop Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/product2_2.jpeg" alt="Product 2">
+                    <p>Reward Your Lovely Dogs</p>
+                    <a href="#shop-now" class="btn">Shop Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/product3_3.jpeg" alt="Product 3">
+                    <p>Cat Litter Solutions</p>
+                    <a href="#shop-now" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" class="login-section">
+        <div class="container">
+            <h2>Login</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 woolIT Pet Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        window.addEventListener('scroll', function() {
+            let elements = document.querySelectorAll('.fadeIn');
+            let screenHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                let elementPosition = element.getBoundingClientRect().top;
+                if (elementPosition < screenHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelector('.login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Login functionality not implemented yet.');
+        });
+    </script>
+</body>
+</html>

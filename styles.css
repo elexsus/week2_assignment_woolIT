@@ -1,0 +1,292 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Styling */
+header {
+    background-color: #5f0f40;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.header-right a {
+    color: #fb8b24;
+    font-size: 20px;
+}
+
+.logo img {
+    
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fb8b24;
+    font-weight: bold;
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    background: #0f4c5c;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background: #e36414;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-image {
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Pet Categories Section */
+#shop-by-pet {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#shop-by-pet h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pet-categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pet-category {
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.pet-category:hover {
+    transform: scale(1.1);
+}
+
+.pet-category img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.pet-category p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Featured Products Section */
+#featured-products {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#featured-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card .btn {
+    padding: 10px 20px;
+    background: #e36414;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.product-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.product-card {
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Login Section */
+.login-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.login-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form .btn {
+    padding: 10px 20px;
+    background: #e36414;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #5f0f40;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+/* Slideshow Section */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
